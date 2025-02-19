@@ -12,7 +12,7 @@ title: "Главная"
 </section>
 
 <!-- Example Section: Обо мне -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <h2>Обо мне</h2>
     <div class="about">
@@ -20,4 +20,4 @@ title: "Главная"
       <p>Краткая информация обо мне, моем творческом пути и профессиональных достижениях.</p>
     </div>
   </div>
-</section>
+</section> -->
