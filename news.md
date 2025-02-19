@@ -18,6 +18,7 @@ title: "Новости"
       <li><a href="https://www.podpisnie.ru/articles/detstvo/itogi-2022-ot-opg-yaselki-laureaty-premii-marmeladnoe-serdechko-i-otkrovennye-priznaniya/?srsltid=AfmBOopqcN3eN6BDnNg-lhVxtNaQ52DNbFrRaYTrMrV_aYV7Iqp3a69A" target="_blank">Подписные: Итоги 2022</a></li>
       <li><a href="https://zimamagazine.com/2022/09/chto-pochitat-pyat-knig-o-sovremennyh-russkih-emigrantah/" target="_blank">ZIMA Magazine: Что почитать – пять книг о современных русских эмигрантах</a></li>
     </ul>
+    <p></p>
 
     <h3>Видео</h3>
     <ul class="video-list">
