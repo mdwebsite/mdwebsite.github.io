@@ -16,5 +16,21 @@
   {% include footer.html %}
   <!-- Optional JS for interactions -->
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  <!-- At the bottom of your layout file, just before </body> -->
+<script>
+    let lastScroll = 0;
+    const header = document.querySelector('.site-header');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > lastScroll && currentScroll > 70) {
+        header.classList.add('header-scroll-down');
+      } else {
+        header.classList.remove('header-scroll-down');
+      }
+      lastScroll = currentScroll;
+    });
+    </script>
 </body>
 </html>
