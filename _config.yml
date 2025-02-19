@@ -1,5 +1,5 @@
-title: "Название сайта"
+title: "Мария Данилова, писатель"
 description: "Сайт автора"
 baseurl: ""          # Use empty string for user/organization pages
-url: "https://username.github.io"  # Replace with your GitHub Pages URL
+url: "https://mdwebsite.github.io"  # Replace with your GitHub Pages URL
 markdown: kramdown
