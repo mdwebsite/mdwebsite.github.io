@@ -12,25 +12,35 @@
 </head>
 <body>
   {% include header.html %}
-  {{ content }}
+
+  <main>
+    {{ content }}
+  </main>
+
   {% include footer.html %}
+
   <!-- Optional JS for interactions -->
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-  <!-- At the bottom of your layout file, just before </body> -->
-<script>
+  <script>
     let lastScroll = 0;
     const header = document.querySelector('.site-header');
-    
+
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        header.classList.remove('header-scroll-down');
+        return;
+      }
       if (currentScroll > lastScroll && currentScroll > 70) {
+        // Scrolling down
         header.classList.add('header-scroll-down');
       } else {
+        // Scrolling up
         header.classList.remove('header-scroll-down');
       }
       lastScroll = currentScroll;
     });
-    </script>
+  </script>
 </body>
 </html>

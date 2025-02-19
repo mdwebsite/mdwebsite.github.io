@@ -1,4 +1,4 @@
-/* Reset & Global Styles */
+/* Root Variables */
 :root {
     --primary-color: #2c3e50;
     --accent-color: #3498db;
@@ -8,10 +8,15 @@
     --transition-speed: 0.3s;
   }
   
+  /* Reset & Global Styles */
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
   
   body {
@@ -20,10 +25,10 @@
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
-    padding: var(--header-height) 0 0 0;
+    padding-top: var(--header-height);
   }
   
-  /* Enhanced Header */
+  /* HEADERS & NAV */
   .site-header {
     position: fixed;
     top: 0;
@@ -32,18 +37,8 @@
     z-index: 100;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,
-    0, 0, 0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: transform var(--transition-speed) ease;
-  }
-  
-  /* Header scroll behavior */
-  .header-scroll-up {
-    transform: translateY(0);
-  }
-  
-  .header-scroll-down {
-    transform: translateY(-100%);
   }
   
   .site-header .container {
@@ -53,6 +48,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  
+  /* On scroll down, hide header */
+  .header-scroll-down {
+    transform: translateY(-100%);
   }
   
   .site-header .logo a {
@@ -67,7 +67,6 @@
     color: var(--accent-color);
   }
   
-  /* Enhanced Navigation */
   .site-nav ul {
     list-style: none;
     display: flex;
@@ -97,7 +96,7 @@
     width: 100%;
   }
   
-  /* Enhanced Hero Section */
+  /* HERO */
   .hero {
     position: relative;
     height: 100vh;
@@ -154,44 +153,81 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  /* Enhanced Section Styles */
+  /* SECTIONS & CONTAINER */
   .section {
     padding: 6rem 2rem;
-    position: relative;
   }
   
-  .section .container {
+  .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   
-  .section h2 {
-    font-size: 2.5rem;
+  .section h1,
+  .section h2,
+  .section h3,
+  .section h4 {
+    margin-bottom: 1rem;
+  }
+  
+  .section p {
+    margin-bottom: 1rem;
+  }
+  
+  /* BOOKS LIST, NEWS LIST, ETC. */
+  .book-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+  
+  .book-list li {
     margin-bottom: 2rem;
-    text-align: center;
-    color: var(--primary-color);
-    position: relative;
-    padding-bottom: 1rem;
   }
   
-  .section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent-color);
+  /* CONTACT FORM */
+  .contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
   
-  /* Enhanced Footer */
+  .contact-form label {
+    font-weight: 600;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .contact-form button {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background var(--transition-speed) ease;
+  }
+  
+  .contact-form button:hover {
+    background: #1b73ab; /* slightly darker accent color */
+  }
+  
+  /* FOOTER */
   footer {
     background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 3rem 1rem;
     font-size: 0.9rem;
+    margin-top: 4rem; /* added top margin for breathing room */
   }
   
   footer a {
@@ -204,7 +240,7 @@
     color: #fff;
   }
   
-  /* Enhanced Responsive Design */
+  /* MEDIA QUERIES */
   @media (max-width: 768px) {
     :root {
       --header-height: 60px;
@@ -226,12 +262,7 @@
       padding: 4rem 1rem;
     }
   }
-  
-  /* Add smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
+    
   /* Add selection styling */
   ::selection {
     background: var(--accent-color);
