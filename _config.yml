@@ -1,0 +1,5 @@
+title: "Название сайта"
+description: "Сайт автора"
+baseurl: ""          # Use empty string for user/organization pages
+url: "https://username.github.io"  # Replace with your GitHub Pages URL
+markdown: kramdown
